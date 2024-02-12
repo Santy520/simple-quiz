@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"
+  ></script>
+    <title>simple-quiz</title>
+</head>
+
+<body>
+    <header class="app">
+        <a id=leaderboard-link>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+        </i></a> 
+        
+        <time>Time: <span id="time"></span></time>
+    </header>
+
+    <main>
+        <div id=start-card class="card">
+            <h1 id=title> Welcome to this Coding Quiz</h1>
+
+            <button id=start-button class="button">Start</button>
+        </div>
+
+        <div hidden id=question-card class="card">
+
+            <h2 id=question-text></h2>
+
+            <div id=quiz-options>
+                <button id=option0 class="btn option-button"></button>
+                <button id=option1 class="btn option-button"></button>
+                <button id=option2 class="btn option-button"></button>
+                <button id=option3 class="btn option-button"></button>
+            </div>
+
+            <div id=result-div>
+                <hr>
+                <p id=result-text></p>
+            </div>
+
+        </div>
+
+        <div hidden id=score-card class="card">
+            <h2>Finished!</h2>
+            <p>This is your final score <span id=score></span>.</p>
+            <form class="inline-form" id="submission-form">
+                  <label for="initials">Enter initials: </label>
+                  <input type="text" id="initials">
+                  <button id="submit-button" class="button">Submit</button>
+            </form>
+        </div>
+
+        <div hidden id=leaderboard-card class="card">
+            <h1>Highscores</h1>
+            <ol id="highscore-list">
+            </ol>
+            <div class="inline-buttons">
+                <button id="back-button" class="button">Go Back</button>
+                <button id="clear-button" class="button">Clear Highscores</button>
+            </div>
+        </div>
+
+        <p id="time"></p>
+        
+        <script>
+        const d = new Date();
+        document.getElementById("time").innerHTML = d;
+        </script> 
+
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+
+</html> 
